@@ -19,4 +19,4 @@ else
 fi
 
 npm install
-npm run build
+npm run generate
