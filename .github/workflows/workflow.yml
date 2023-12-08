@@ -1,0 +1,21 @@
+name: Tests
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Copy SSH key
+        run: |
+          echo "${{ secrets.SSH_KEY }}" >> ./id_rsa
+          chmod 600 id_rsa
+      - name: Run deploy script
+        run: |
+          scp -C -o StrictHostKeyChecking=no -i ./id_rsa ./deployment/bin/deploy.sh ${{ secrets.SSH_CONNECTION }}:/home/stanko/personal-blog/frontend/deploy.sh
+          scp -C -o StrictHostKeyChecking=no -i ./id_rsa ./id_rsa ${{ secrets.SSH_CONNECTION }}:/home/stanko/.ssh/id_rsa
+          ssh -tt -o StrictHostKeyChecking=no -i ./id_rsa ${{ secrets.SSH_CONNECTION }} "chown stanko:stanko /home/stanko/personal-blog/frontend/deploy.sh && chmod +x /home/stanko/personal-blog/frontend/deploy.sh"
+          ssh -tt -o StrictHostKeyChecking=no -i ./id_rsa ${{ secrets.SSH_CONNECTION }} "/home/stanko/personal-blog/frontend/deploy.sh"
