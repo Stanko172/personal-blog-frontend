@@ -9,9 +9,15 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Roboto', 'sans-serif'],
+    },
     extend: {
       colors: {
         'brand': '#131027',
+      },
+      maxWidth: {
+        '8xl': '90rem',
       },
     },
   },
