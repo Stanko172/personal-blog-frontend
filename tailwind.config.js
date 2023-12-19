@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       colors: {
         brand: '#131027',
+        "brand-outline": '#222240',
       },
       maxWidth: {
         '8xl': '90rem',
