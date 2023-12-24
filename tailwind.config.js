@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'brand': '#131027',
+        'brand-background': '#131027',
         'brand-outline': '#222240',
       },
       maxWidth: {
