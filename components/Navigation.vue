@@ -5,7 +5,7 @@ const navigationStore = useNavigationStore()
 <template>
   <header class="fixed top-0 z-40 w-full backdrop-blur border-b border-b-brand-outline flex-none bg-brand-background lg:bg-transparent">
     <nav class="relative">
-      <div class="flex justify-between max-w-8xl mx-auto p-4 lg:p-6">
+      <div class="flex justify-between max-w-8xl mx-auto p-4 sm:px-6 md:px-8">
         <NuxtLink to="/" aria-current="page">
           <span class="sr-only">Stanko Bebek's Site</span>
           <div class="flex items-center space-x-4">
