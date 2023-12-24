@@ -44,7 +44,7 @@ const routes = [
       >
         <ul
           v-if="isSidebarOpen"
-          class="absolute z-20 py-10 px-6 bg-brand w-4/6 h-screen overflow-y-auto space-y-7 mt-[1px]"
+          class="absolute z-20 py-10 px-6 bg-brand w-[14.5rem] h-screen overflow-y-auto space-y-7 mt-[1px]"
         >
           <li v-for="route in routes" :key="route.name">
             <NuxtLink :to="route.path" class="flex items-center px-3 py-2">
