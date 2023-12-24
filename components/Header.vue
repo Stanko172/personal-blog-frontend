@@ -12,7 +12,7 @@ const navigationStore = useNavigationStore()
             <div class="text-3xl">
               👨‍💻
             </div>
-            <div class="text-lg text-slate-200">
+            <div class="text-lg text-slate-300">
               Stanko Bebek
             </div>
           </div>
