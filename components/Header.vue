@@ -17,8 +17,9 @@ const navigationStore = useNavigationStore()
             </div>
           </div>
         </NuxtLink>
-        <button @click="navigationStore.toggleSidebar">
-          toggle
+        <button @click="navigationStore.toggleSidebar" class="lg:hidden">
+          <Icon v-if="navigationStore.isSidebarOpen" name="heroicons-solid:x" class="w-6 h-6 text-slate-300" />
+          <Icon v-else name="heroicons-solid:bars-3-bottom-right" class="w-6 h-6 text-slate-300"/>
         </button>
       </div>
     </nav>
