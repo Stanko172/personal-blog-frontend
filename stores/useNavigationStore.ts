@@ -1,4 +1,5 @@
 import { useMediaQuery } from '@vueuse/core'
+import { skipHydrate } from 'pinia'
 
 export const useNavigationStore = defineStore('navigation', () => {
   const isLargeScreen = useMediaQuery('(min-width: 1024px)')
@@ -9,6 +10,7 @@ export const useNavigationStore = defineStore('navigation', () => {
   }
 
   function updateSidebar(): void {
+    console.log('is sidebar open: ', isSidebarOpen.value);
     if (isLargeScreen.value) {
       isSidebarOpen.value = true
       return
@@ -20,7 +22,7 @@ export const useNavigationStore = defineStore('navigation', () => {
   watch(isLargeScreen, updateSidebar, { immediate: true })
 
   return {
-    isSidebarOpen: readonly(isSidebarOpen),
+    isSidebarOpen: skipHydrate(isSidebarOpen),
     toggleSidebar,
   }
 })
