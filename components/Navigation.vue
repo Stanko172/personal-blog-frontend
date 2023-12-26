@@ -27,8 +27,11 @@ const navigationStore = useNavigationStore()
         <li v-for="route in routes" :key="route.name">
           <NuxtLink
             :to="route.path"
-            class="flex items-center px-3 py-2 text-brand-text"
-            :class="{ 'text-brand-primary': route.path === $route.path }"
+            class="flex items-center px-3 py-2"
+            :class="[route.path === $route.path
+              ? 'text-brand-primary'
+              : 'text-brand-text',
+            ]"
           >
             <Icon :name="route.icon" class="w-4 h-4 mr-2" />
             <span class="text-sm">{{ route.name }}</span>
