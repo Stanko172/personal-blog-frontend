@@ -12,14 +12,14 @@ const navigationStore = useNavigationStore()
             <div class="text-3xl">
               👨‍💻
             </div>
-            <div class="text-lg text-slate-300">
+            <div class="text-lg text-brand-text">
               Stanko Bebek
             </div>
           </div>
         </NuxtLink>
-        <button @click="navigationStore.toggleSidebar" class="lg:hidden">
-          <Icon v-if="navigationStore.isSidebarOpen" name="heroicons-solid:x" class="w-6 h-6 text-slate-300" />
-          <Icon v-else name="heroicons-solid:bars-3-bottom-right" class="w-6 h-6 text-slate-300"/>
+        <button class="lg:hidden" @click="navigationStore.toggleSidebar">
+          <Icon v-if="navigationStore.isSidebarOpen" name="heroicons-solid:x" class="w-6 h-6 text-brand-text" />
+          <Icon v-else name="heroicons-solid:bars-3-bottom-right" class="w-6 h-6 text-brand-text" />
         </button>
       </div>
     </nav>

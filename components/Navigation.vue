@@ -25,7 +25,7 @@ const navigationStore = useNavigationStore()
         class="lg:block fixed space-y-5 z-30 inset-0 top-[3.8125rem] right-auto w-[14.5rem] py-10 px-6 overflow-y-auto border-r border-r-brand-outline bg-brand-background left-[max(0px,calc(50%-45rem))]"
       >
         <li v-for="route in routes" :key="route.name">
-          <NuxtLink :to="route.path" class="flex items-center px-3 py-2 text-slate-300">
+          <NuxtLink :to="route.path" class="flex items-center px-3 py-2 text-brand-text">
             <Icon :name="route.icon" class="w-4 h-4 mr-2" />
             <span class="text-sm">{{ route.name }}</span>
           </NuxtLink>

@@ -10,7 +10,6 @@ export const useNavigationStore = defineStore('navigation', () => {
   }
 
   function updateSidebar(): void {
-    console.log('is sidebar open: ', isSidebarOpen.value);
     if (isLargeScreen.value) {
       isSidebarOpen.value = true
       return
