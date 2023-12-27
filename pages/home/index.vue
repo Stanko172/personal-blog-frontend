@@ -14,7 +14,7 @@ import { HeadingElement } from '@/enums'
     <p>  
       In my role as a fullstack developer, I aim to unify front-end and backend elements while extending my focus to encompass business aspects and enhance user experience. 
       My enthusiasm lies in the <strong class="text-brand-secondary">startup</strong> realm, and I harbor a particular affection for <strong class="text-brand-primary">Laravel</strong> and <strong class="text-brand-tertiary">Vue.js</strong> as my primary technologies.
-      Moreover, I hold a sincere affinity for design and mobile development.
+      Moreover, I hold a sincere affinity for UI and system design, as well as mobile development.
     </p>
   </Page>
 </template>
