@@ -17,3 +17,8 @@ export enum Color {
   SECONDARY = 'secondary',
   TERTIARY = 'tertiary',
 }
+
+export enum Role {
+  'BUTTON' = 'button',
+  'LINK' = 'link',
+}
