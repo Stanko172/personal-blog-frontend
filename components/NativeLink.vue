@@ -4,7 +4,7 @@ import { NativeLinkTarget } from '~/enums'
 withDefaults(
   defineProps<{
     href: string
-    target: NativeLinkTarget
+    target?: NativeLinkTarget
   }>(),
   {
     target: NativeLinkTarget.SELF,

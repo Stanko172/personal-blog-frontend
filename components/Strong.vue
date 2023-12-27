@@ -3,7 +3,7 @@ import { Color } from '~/enums'
 
 const props = withDefaults(
   defineProps<{
-    color: Color
+    color?: Color
   }>(),
   {
     color: Color.PRIMARY,

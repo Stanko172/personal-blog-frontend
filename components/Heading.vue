@@ -3,7 +3,7 @@ import { HeadingElement } from '~/enums'
 
 const props = withDefaults(
   defineProps<{
-    heading: HeadingElement
+    heading?: HeadingElement
   }>(),
   {
     heading: HeadingElement.H1,
