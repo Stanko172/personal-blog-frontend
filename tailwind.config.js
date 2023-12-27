@@ -19,6 +19,7 @@ module.exports = {
         'brand-outline': '#222240',
         'brand-primary': '#f056c7',
         'brand-secondary': '#a4a0fb',
+        'brand-tertiary': '#58e6d9',
         'brand-text': '#d9dbdf',
       },
       maxWidth: {
