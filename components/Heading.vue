@@ -11,8 +11,8 @@ const props = withDefaults(
 )
 
 const classList = computed<object>(() => ({
-  'font-semibold text-3xl sm:text-5xl': props.heading === HeadingElement.H1,
-  'text-2xl': props.heading === HeadingElement.H2,
+  'font-bold text-3xl sm:text-5xl': props.heading === HeadingElement.H1,
+  'font-semibold text-xl': props.heading === HeadingElement.H2,
 }))
 </script>
 
