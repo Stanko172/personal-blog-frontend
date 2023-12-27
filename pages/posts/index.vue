@@ -2,6 +2,6 @@
 
 <template>
   <Page>
-    <h1>Posts</h1>
+    <EmptyCard />
   </Page>
 </template>
