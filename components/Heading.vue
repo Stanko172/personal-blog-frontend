@@ -1,23 +1,29 @@
 <script setup lang="ts">
-import { HeadingElement } from '~/enums'
+import { Color, HeadingElement } from '~/enums'
 
 const props = withDefaults(
   defineProps<{
-    heading?: HeadingElement
+    color?: Color
+    element?: HeadingElement
   }>(),
   {
-    heading: HeadingElement.H1,
+    color: Color.TEXT,
+    element: HeadingElement.H1,
   },
 )
 
 const classList = computed<object>(() => ({
-  'font-bold text-3xl sm:text-5xl': props.heading === HeadingElement.H1,
-  'font-semibold text-xl': props.heading === HeadingElement.H2,
+  'font-bold text-3xl sm:text-5xl': props.element === HeadingElement.H1,
+  'font-semibold text-xl': props.element === HeadingElement.H2,
+  'text-brand-text': props.color === Color.TEXT,
+  'text-brand-primary': props.color === Color.PRIMARY,
+  'text-brand-secondary': props.color === Color.SECONDARY,
+  'text-brand-tertiary': props.color === Color.TERTIARY,
 }))
 </script>
 
 <template>
-  <component :is="heading" class="text-brand-text" :class="classList">
+  <component :is="element" :class="classList">
     <slot />
   </component>
 </template>

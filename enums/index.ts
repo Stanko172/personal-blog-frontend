@@ -1,6 +1,13 @@
-export enum NativeLinkTarget {
-  BLANK = '_blank',
-  SELF = '_self',
+export enum Color {
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  TERTIARY = 'tertiary',
+  TEXT = 'text',
+}
+
+export enum FontSize {
+  SMALL = 'small',
+  BASE = 'base',
 }
 
 export enum HeadingElement {
@@ -12,10 +19,9 @@ export enum HeadingElement {
   H6 = 'h6',
 }
 
-export enum Color {
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-  TERTIARY = 'tertiary',
+export enum NativeLinkTarget {
+  BLANK = '_blank',
+  SELF = '_self',
 }
 
 export enum Role {

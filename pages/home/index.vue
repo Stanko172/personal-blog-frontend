@@ -7,9 +7,9 @@ import { Color, HeadingElement, Role } from '~/enums'
     <div class="space-y-7">
       <div class="space-y-1.5">
         <Heading>Stanko Bebek</Heading>
-      <Heading :heading="HeadingElement.H2">
-        Full stack software developer
-      </Heading>
+        <Heading :element="HeadingElement.H2">
+          Full stack software developer
+        </Heading>
       </div>
       <Paragraph>
         In my role as a fullstack developer, I aim to unify front-end and backend elements while extending my focus to encompass business aspects and enhance user experience.
@@ -17,12 +17,26 @@ import { Color, HeadingElement, Role } from '~/enums'
         Moreover, I hold a sincere affinity for UI and system design, as well as for mobile development.
       </Paragraph>
       <Button
-        :role="Role.LINK" 
+        :role="Role.LINK"
         :color="Color.PRIMARY"
         @click="$router.push('/about')"
       >
         Find out more
       </Button>
     </div>
-    </Page>
+    <div class="mt-24">
+      <div class="mb-8">
+        <Heading
+          :element="HeadingElement.H2"
+          :color="Color.PRIMARY"
+        >
+          Latest content
+        </Heading>
+        <Paragraph>
+          Discover the newest stories and ideas in my recent blog entries.
+        </Paragraph>
+      </div>
+      <EmptyCard />
+    </div>
+  </Page>
 </template>
