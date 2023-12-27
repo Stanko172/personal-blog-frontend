@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       pages.push({
         name: 'home',
         path: '/',
-        file: '~/pages/home/index.vue',
+        file: '~/pages/index.vue',
       })
     },
   },
