@@ -10,9 +10,6 @@ export default defineNuxtConfig({
       })
     },
   },
-  typescript: {
-    typeCheck: true,
-  },
   pinia: {
     storesDirs: ['./stores/**'],
   },
