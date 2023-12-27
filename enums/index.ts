@@ -11,3 +11,9 @@ export enum HeadingElement {
   H5 = 'h5',
   H6 = 'h6',
 }
+
+export enum Color {
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  TERTIARY = 'tertiary',
+}

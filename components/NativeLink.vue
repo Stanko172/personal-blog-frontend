@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { NativeLinkTarget } from '@/enums'
+import { NativeLinkTarget } from '~/enums'
 
 withDefaults(
   defineProps<{
