@@ -9,6 +9,13 @@ const routes = [
 ]
 
 const navigationStore = useNavigationStore()
+
+function closeNavigation() {
+  const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+  if (isLargeScreen.value) return;
+
+  navigationStore.closeSidebar();
+}
 </script>
 
 <template>
@@ -27,6 +34,7 @@ const navigationStore = useNavigationStore()
         <li v-for="route in routes" :key="route.name">
           <NuxtLink
             :to="route.path"
+            @click="closeNavigation"
             class="flex items-center px-3 py-2"
             :class="[route.path === $route.path
               ? 'text-brand-primary'
