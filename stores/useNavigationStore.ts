@@ -9,6 +9,10 @@ export const useNavigationStore = defineStore('navigation', () => {
     isSidebarOpen.value = !isSidebarOpen.value
   }
 
+  function closeSidebar(): void {
+    isSidebarOpen.value = false
+  }
+
   function updateSidebar(): void {
     if (isLargeScreen.value) {
       isSidebarOpen.value = true
@@ -21,6 +25,7 @@ export const useNavigationStore = defineStore('navigation', () => {
   watch(isLargeScreen, updateSidebar, { immediate: true })
 
   return {
+    closeSidebar,
     isSidebarOpen: skipHydrate(isSidebarOpen),
     toggleSidebar,
   }

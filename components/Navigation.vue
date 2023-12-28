@@ -9,6 +9,14 @@ const routes = [
 ]
 
 const navigationStore = useNavigationStore()
+
+function closeNavigation() {
+  const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+  if (isLargeScreen.value)
+    return
+
+  navigationStore.closeSidebar()
+}
 </script>
 
 <template>
@@ -32,6 +40,7 @@ const navigationStore = useNavigationStore()
               ? 'text-brand-primary'
               : 'text-brand-text',
             ]"
+            @click="closeNavigation"
           >
             <Icon :name="route.icon" class="w-4 h-4 mr-2" />
             <span class="text-sm">{{ route.name }}</span>
