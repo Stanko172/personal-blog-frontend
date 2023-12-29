@@ -7,14 +7,11 @@ export default defineNuxtConfig({
     }
   },
   modules: ['nuxt-icon', '@pinia/nuxt', '@vueuse/nuxt'],
-  hooks: {
-    'pages:extend': (pages) => {
-      pages.push({
-        name: 'home',
-        path: '/',
-        file: '~/pages/index.vue',
-      })
-    },
+  nitro: {
+    compressPublicAssets: true,
+    prerender: {
+      crawlLinks: true
+    }
   },
   pinia: {
     storesDirs: ['./stores/**'],
