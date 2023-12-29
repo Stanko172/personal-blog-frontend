@@ -3,7 +3,7 @@ import { Color, HeadingElement, Role } from '~/enums'
 </script>
 
 <template>
-  <Page>
+  <Page title="Home">
     <div class="space-y-7">
       <div class="space-y-1.5">
         <Heading>Stanko Bebek</Heading>
@@ -19,6 +19,7 @@ import { Color, HeadingElement, Role } from '~/enums'
       <Button
         :role="Role.LINK"
         :color="Color.PRIMARY"
+        name="Find out more"
         @click="$router.push('/about')"
       >
         Find out more

@@ -5,7 +5,7 @@ const { copy, copied, isSupported } = useClipboard()
 
 <template>
   <div class="grid gap-4 rounded border border-brand-outline bg-surface/50 px-4 sm:px-6 py-8">
-    <img src="/stankobebek.jpeg" alt="Stanko Bebek" class="block rounded-full border-2 border-brand-text h-16 w-16 m-0 mx-auto" width="60" height="60" loading="lazy" decoding="async">
+    <img src="/stankobebek.webp" alt="Stanko Bebek" class="block rounded-full border-2 border-brand-text h-16 w-16 m-0 mx-auto" width="60" height="60" loading="lazy" decoding="async">
     <div>
       <h5 class="mb-0.5 text-base text-center leading-6 font-semibold uppercase text-brand-secondary">
         Stanko Bebek

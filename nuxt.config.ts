@@ -4,14 +4,15 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-    }
+      title: 'Stanko Bebek\'s blog',
+    },
   },
   modules: ['nuxt-icon', '@pinia/nuxt', '@vueuse/nuxt'],
   nitro: {
     compressPublicAssets: true,
     prerender: {
-      crawlLinks: true
-    }
+      crawlLinks: true,
+    },
   },
   pinia: {
     storesDirs: ['./stores/**'],

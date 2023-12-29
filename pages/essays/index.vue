@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <Page>
+  <Page title="Essays">
     <EmptyCard />
   </Page>
 </template>

@@ -1,12 +1,11 @@
 module.exports = {
-    apps: [
-      {
-        name: 'Stanko Bebek',
-        port: '3000',
-        exec_mode: 'cluster',
-        instances: 'max',
-        script: './.output/server/index.mjs'
-      }
-    ]
-  }
-  
+  apps: [
+    {
+      name: 'Stanko Bebek',
+      port: '3000',
+      exec_mode: 'cluster',
+      instances: 'max',
+      script: './.output/server/index.mjs',
+    },
+  ],
+}
