@@ -1,9 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { useRoute } from 'vue-router';
+  
+  const formattedRouteName = computed<string>(() => {
+    if (useRoute().name === 'index') return 'home';
+    return useRoute().name as string;
+  });
+</script>
 
 <template>
   <div>
     <strong class="block mb-10 text-sm text-brand-primary capitalize">
-      {{ $route.name }}
+      {{ formattedRouteName }}
     </strong>
     <slot />
 

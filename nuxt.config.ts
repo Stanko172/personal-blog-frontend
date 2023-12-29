@@ -7,15 +7,6 @@ export default defineNuxtConfig({
     },
   },
   modules: ['nuxt-icon', '@pinia/nuxt', '@vueuse/nuxt'],
-  hooks: {
-    'pages:extend': (pages) => {
-      pages.push({
-        name: 'home',
-        path: '/',
-        file: '~/pages/home/index.vue',
-      })
-    },
-  },
   typescript: {
     typeCheck: true,
   },
