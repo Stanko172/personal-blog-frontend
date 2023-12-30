@@ -19,7 +19,7 @@ import { Color, HeadingElement, Role } from '~/enums'
       <Button
         :role="Role.LINK"
         :color="Color.PRIMARY"
-        name="Find out more"
+        name="find-out-more"
         @click="$router.push('/about')"
       >
         Find out more
