@@ -12,6 +12,7 @@ const navigationStore = useNavigationStore()
 
 function closeNavigation() {
   const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+
   if (isLargeScreen.value)
     return
 
@@ -21,7 +22,11 @@ function closeNavigation() {
 
 <template>
   <ClientOnly>
-    <div v-if="navigationStore.isSidebarOpen" aria-label="lightbox" class="z-10 fixed lg:hidden h-screen w-screen mt-[1px] bg-black opacity-80" />
+    <div
+      v-if="navigationStore.isSidebarOpen"
+      aria-label="lightbox"
+      class="z-10 fixed lg:hidden h-screen w-screen mt-[1px] bg-black opacity-80"
+    />
     <Transition
       enter-active-class="transition-transform duration-300 ease-in-out"
       leave-active-class="transition-transform duration-300 ease-in-out"
@@ -35,7 +40,7 @@ function closeNavigation() {
         <li v-for="route in routes" :key="route.name">
           <NuxtLink
             :to="route.path"
-            class="flex items-center px-3 py-2"
+            class="flex items-center px-3 py-2 w-fit"
             :class="[route.path === $route.path
               ? 'text-brand-primary'
               : 'text-brand-text',

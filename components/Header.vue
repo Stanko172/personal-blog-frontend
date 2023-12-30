@@ -20,7 +20,8 @@ const navigationStore = useNavigationStore()
         <button
           class="lg:hidden"
           name="toggle"
-          @click="navigationStore.toggleSidebar">
+          @click="navigationStore.toggleSidebar"
+        >
           <Icon v-if="navigationStore.isSidebarOpen" name="heroicons-solid:x" class="w-6 h-6 text-brand-text" />
           <Icon v-else name="heroicons-solid:bars-3-bottom-right" class="w-6 h-6 text-brand-text" />
         </button>
