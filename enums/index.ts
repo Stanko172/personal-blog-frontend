@@ -19,7 +19,7 @@ export enum HeadingElement {
   H6 = 'h6',
 }
 
-export enum NativeLinkTarget {
+export enum HyperlinkTarget {
   BLANK = '_blank',
   SELF = '_self',
 }

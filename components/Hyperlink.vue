@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { NativeLinkTarget } from '~/enums'
+import { HyperlinkTarget } from '~/enums'
 
 withDefaults(
   defineProps<{
-    href: string
-    target?: NativeLinkTarget
+    to: string
+    target?: HyperlinkTarget
   }>(),
   {
-    target: NativeLinkTarget.SELF,
+    target: HyperlinkTarget.SELF,
   },
 )
 </script>
 
 <template>
-  <a
-    :href="href"
+  <NuxtLink
+    :to="to"
     :target="target"
     class="text-brand-secondary hover:text-brand-text underline"
   >
     <slot />
-  </a>
+  </NuxtLink>
 </template>
