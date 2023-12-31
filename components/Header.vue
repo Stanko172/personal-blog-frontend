@@ -10,7 +10,7 @@ const navigationStore = useNavigationStore()
           <span class="sr-only">Stanko Bebek's Site</span>
           <div class="flex items-center space-x-4">
             <div class="text-3xl">
-              👨‍💻
+              <img src="/cat-technologist.png" alt="Stanko Bebek's Site" class="w-12 h-12">
             </div>
             <div class="text-lg text-brand-text">
               Stanko Bebek
