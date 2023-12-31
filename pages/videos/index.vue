@@ -9,7 +9,7 @@ import { FontSize, HeadingElement } from '~/enums'
         :element="HeadingElement.H1"
         :font-size="FontSize.XLARGE"
       >
-        Essays
+        Videos
       </Heading>
       <Paragraph>
         Visual Ventures: Diving into a Kaleidoscope of Videos and Multimedia Marvels
