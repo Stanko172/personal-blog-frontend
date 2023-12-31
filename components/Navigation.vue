@@ -24,6 +24,7 @@ function closeNavigation() {
   <ClientOnly>
     <div
       v-if="navigationStore.isSidebarOpen"
+      @click="closeNavigation"
       aria-label="lightbox"
       class="z-10 fixed lg:hidden h-screen w-screen mt-[1px] bg-black opacity-80"
     />
