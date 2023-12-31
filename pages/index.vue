@@ -6,7 +6,9 @@ import { Color, HeadingElement, Role } from '~/enums'
   <Page title="Home">
     <div class="space-y-7">
       <div class="space-y-1.5">
-        <Heading>Stanko Bebek</Heading>
+        <Heading>
+          Stanko Bebek
+        </Heading>
         <Heading :element="HeadingElement.H2">
           Full stack software developer
         </Heading>

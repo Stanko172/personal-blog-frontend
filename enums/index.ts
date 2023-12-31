@@ -8,6 +8,9 @@ export enum Color {
 export enum FontSize {
   SMALL = 'small',
   BASE = 'base',
+  LARGE = 'large',
+  XLARGE = 'xlarge',
+  XXLARGE = 'xxlarge',
 }
 
 export enum HeadingElement {
