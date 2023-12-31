@@ -12,7 +12,7 @@ import { FontSize, HeadingElement } from '~/enums'
         Videos
       </Heading>
       <Paragraph>
-        Visual Ventures: Diving into a Kaleidoscope of Videos and Multimedia Marvels
+        Visual Ventures: Diving into a Kaleidoscope of Videos and Multimedia Marvels.
       </Paragraph>
       <EmptyCard />
     </Stack>

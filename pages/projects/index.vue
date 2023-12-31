@@ -12,7 +12,7 @@ import { FontSize, HeadingElement } from '~/enums'
         Projects
       </Heading>
       <Paragraph>
-        Creative Exploits: Showcasing My Diverse Spectrum of Projects
+        Creative Exploits: Showcasing My Diverse Spectrum of Projects.
       </Paragraph>
       <EmptyCard />
     </Stack>
