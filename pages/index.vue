@@ -21,7 +21,7 @@ import { Color, HeadingElement, Role } from '~/enums'
       <Button
         :role="Role.LINK"
         :color="Color.PRIMARY"
-        name="find-out-more"
+        aria-label="find-out-more"
         @click="$router.push('/about')"
       >
         Find out more
