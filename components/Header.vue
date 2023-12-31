@@ -19,7 +19,7 @@ const navigationStore = useNavigationStore()
         </NuxtLink>
         <button
           class="lg:hidden"
-          name="toggle"
+          aria-label="toggle"
           @click="navigationStore.toggleSidebar"
         >
           <Icon v-if="navigationStore.isSidebarOpen" name="heroicons-solid:x" class="w-6 h-6 text-brand-text" />

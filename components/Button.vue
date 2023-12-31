@@ -4,7 +4,7 @@ import { Color, Role } from '~/enums'
 const props = withDefaults(defineProps<{
   color?: Color
   role?: Role
-  ariaLabel: string
+  ariaLabel?: string
 }>(), {
   color: Color.PRIMARY,
   role: Role.BUTTON,
@@ -22,7 +22,7 @@ const classList = computed<object>(() => ({
     class="font-[Roboto] inline-flex border-2 rounded-full bg-transparent font-bold text-base no-underline px-6 py-3 transition-color duration-300 hover:text-brand-text hover:border-brand-text"
     :class="classList"
     :role="role"
-    :ariaLabel="ariaLabel"
+    :aria-label="ariaLabel"
   >
     <slot />
   </button>
