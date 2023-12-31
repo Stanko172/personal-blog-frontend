@@ -27,7 +27,7 @@ import { FontSize, HeadingElement, HyperlinkTarget } from '~/enums'
           Switch
         </Hyperlink> and did cool things like organizing events and participating in hackathons.
 
-        We organized Open Days at the Faculty of Science and Education and the Code Challenge hackathon; we've built websites for computer science studies, the Student Council of the University of Mostar, and more.
+        We organized Open Days at the Faculty of Science and Education and the Code Challenge hackathon; we've built websites for Computer Science studies, the Student Council of the University of Mostar, and more.
 
         <br><br>
 
@@ -50,7 +50,7 @@ import { FontSize, HeadingElement, HyperlinkTarget } from '~/enums'
 
         In the summer of 2021, I landed an internship at <Hyperlink to="https://www.qsd.ba/" :target="HyperlinkTarget.BLANK">
           QSD
-        </Hyperlink>, where I worked on an online library project. The project was also built with Laravel and VueJs, and we had great support from amazing mentors. It was a blast, and I learned a ton about startups, business, and making cool things on the web.
+        </Hyperlink>, where I worked on an online library project. The project was also built with Laravel and VueJs, and we had great support from amazing mentors. It was a blast, and I learned a ton about startups, business, and making cool web and mobile applications.
 
         <br><br>
 
@@ -58,7 +58,7 @@ import { FontSize, HeadingElement, HyperlinkTarget } from '~/enums'
           ZenDev
         </Hyperlink> and worked on projects like <Hyperlink to="https://robinize.com/" :target="HyperlinkTarget.BLANK">
           Robinize
-        </Hyperlink>, an AI tool for content writers. It was a game-changer, and I learned a lot from the awesome people at ZenDev. That was my first real-world project and represented a stepping stone for me. Also, I worked on a project called "Open Hours," where we managed a database with information for over a million places in the world. The project was built with Python and MongoDB.
+        </Hyperlink>, an AI tool for content writers. It was a game-changer, and I learned a lot from the awesome people at ZenDev. That was my first real-world project and represented a stepping stone for me. Also, I worked on a project called Open Hours, where we managed a database with information for over a million places in the world. The project was built with Python and MongoDB.
 
         <br><br>
 
