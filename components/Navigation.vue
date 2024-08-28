@@ -5,7 +5,6 @@ const routes = [
   { name: 'Posts', path: '/posts', icon: 'heroicons-solid:pencil-alt' },
   { name: 'Essays', path: '/essays', icon: 'heroicons-solid:book-open' },
   { name: 'Projects', path: '/projects', icon: 'heroicons-solid:puzzle' },
-  { name: 'Videos', path: '/videos', icon: 'heroicons-solid:video-camera' },
 ]
 
 const navigationStore = useNavigationStore()
