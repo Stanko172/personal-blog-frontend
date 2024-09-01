@@ -14,12 +14,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        'brand-background': '#131127',
+        'brand-background': '#121325',
         'brand-muted': '#605c9d1a',
-        'brand-outline': '#222240',
-        'brand-primary': '#f056c7',
+        'brand-outline': '#1f213b',
+        'brand-primary': '#58e6d9',
         'brand-secondary': '#a4a0fb',
-        'brand-tertiary': '#58e6d9',
+        'brand-tertiary': '#f056c7',
         'brand-text': '#d9dbdf',
       },
       maxWidth: {
