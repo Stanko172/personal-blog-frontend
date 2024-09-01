@@ -15,7 +15,7 @@ import { Color, HeadingElement, Role } from '~/enums'
       </div>
       <Paragraph>
         In my role as a fullstack developer, I aim to unify front-end and backend elements while extending my focus to encompass business aspects and enhance user experience.
-        My enthusiasm lies in the <Strong :color="Color.SECONDARY">startup</Strong> realm, and I harbor a particular affection for <Strong :color="Color.TERTIARY">Laravel</Strong> and <Strong :color="Color.PRIMARY">Vue.js</Strong> as my primary technologies.
+        My enthusiasm lies in the <Strong :color="Color.SECONDARY" underline>startup</Strong> realm, and I harbor a particular affection for <Strong :color="Color.TERTIARY" underline>Laravel</Strong> and <Strong :color="Color.PRIMARY" underline>Vue.js</Strong> as my primary technologies.
         Moreover, I hold a sincere affinity for UI and system design, as well as for mobile development.
       </Paragraph>
     </div>
