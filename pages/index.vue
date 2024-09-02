@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-import { Color, HeadingElement, Role } from '~/enums'
+import { Color, HeadingElement } from '~/enums'
+
+const config = useRuntimeConfig()
+
+const { data } = useFetch('/contents', {
+  baseURL: config.public.apiBaseUrl
+});
 </script>
 
 <template>
@@ -31,7 +37,11 @@ import { Color, HeadingElement, Role } from '~/enums'
           Discover the newest stories and ideas in my recent blog entries.
         </Paragraph>
       </div>
-      <EmptyCard />
+      <EmptyCard v-if="data.data.length === 0"/>
+      <ContentList 
+        v-else
+        :contents="data.data"
+      />
     </div>
   </Page>
 </template>
