@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { FontSize, HeadingElement } from '~/enums'
+
+const config = useRuntimeConfig()
+
+const { data } = useFetch('/contents?type=post', {
+  baseURL: config.public.apiBaseUrl
+});
 </script>
 
 <template>
@@ -14,7 +20,11 @@ import { FontSize, HeadingElement } from '~/enums'
       <Paragraph>
         Tech Trek: Geek Speak, Software Feats, and a Dash of Digital Wizardry.
       </Paragraph>
-      <EmptyCard />
+      <EmptyCard v-if="data?.data.length === 0"/>
+      <ContentList 
+        v-else
+        :contents="data?.data"
+      />
     </Stack>
   </Page>
 </template>
