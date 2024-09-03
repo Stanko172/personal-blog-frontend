@@ -1,10 +1,16 @@
 export interface Content {
-    'id': number,
-    'type': string,
-    'title': string,
     'content': string,
     'cover_image': string,
-    'published_at': string,
     'created_at': string,
+    'id': number,
+    'published_at': string,
+    'slug': string,
+    'title': string,
+    'type': string,
     'updated_at': string,
+    'url': string,
+}
+
+export interface ContentsData {
+    data: Content[]
 }

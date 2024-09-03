@@ -17,6 +17,16 @@ function closeNavigation() {
 
   navigationStore.closeSidebar()
 }
+
+const route = useRoute()
+
+function isRouteActive(current: string) {
+  if (current === '/' && route.path !== '/') {
+    return false
+  }
+
+  return route.path.includes(current)
+}
 </script>
 
 <template>
@@ -41,7 +51,7 @@ function closeNavigation() {
           <NuxtLink
             :to="route.path"
             class="flex items-center px-3 py-2 w-fit"
-            :class="[route.path === $route.path
+            :class="[isRouteActive(route.path)
               ? 'text-brand-primary'
               : 'text-brand-text',
             ]"

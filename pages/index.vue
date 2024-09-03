@@ -37,10 +37,10 @@ const { data } = useFetch('/contents', {
           Discover the newest stories and ideas in my recent blog entries.
         </Paragraph>
       </div>
-      <EmptyCard v-if="data.data.length === 0"/>
+      <EmptyCard v-if="data?.data.length === 0"/>
       <ContentList 
         v-else
-        :contents="data.data"
+        :contents="data?.data"
       />
     </div>
   </Page>

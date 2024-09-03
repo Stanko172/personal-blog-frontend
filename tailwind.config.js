@@ -25,7 +25,53 @@ module.exports = {
       maxWidth: {
         '8xl': '90rem',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'pre': {
+              'background-color': 'inherit',
+              'padding': '0',
+              'border-radius': '0',
+              'box-shadow': 'none',
+              'font-family': 'inherit',
+              'color': 'inherit',
+              'overflow': 'visible',
+            },
+            'code': {
+              'background-color': 'inherit',
+              'padding': '0',
+              'border-radius': '0',
+              'box-shadow': 'none',
+              'font-family': 'inherit',
+              'color': 'inherit',
+            },
+            'pre code': {
+              'background-color': 'inherit',
+              'padding': '0',
+              'border-radius': '0',
+              'box-shadow': 'none',
+              'font-family': 'inherit',
+              'color': 'inherit',
+            },
+            'h2, h3, h4, h5, h6': {
+              color: theme('colors.brand-primary'),
+            },
+            'strong': {
+              color: theme('colors.brand-tertiary'),
+            },
+            'a': {
+              color: theme('colors.brand-secondary'),
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            },
+          },
+        },
+      }),
     },
   },
-  plugins: [],
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+};

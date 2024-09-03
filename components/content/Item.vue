@@ -7,8 +7,8 @@ const props = defineProps<{
 </script>
 
 <template>
-    <a 
-        href="#" 
+    <NuxtLink
+        :to="content.url"
         class="flex flex-col md:flex-row gap-3 md:gap-6 items-center bg-brand-surface border border-brand-outline rounded p-4 no-underline hover:transform hover:translate-y-[-10px] transition-transform duration-300"
     >
         <img 
@@ -32,5 +32,5 @@ const props = defineProps<{
                 </li>
             </ul> 
         </div> 
-    </a>
+    </NuxtLink>
 </template>
