@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
     <a 
         href="#" 
-        class="flex flex-col md:flex-row gap-3 md:gap-6 items-center bg-brand-surface border border-brand-outline rounded p-4 no-underline "
+        class="flex flex-col md:flex-row gap-3 md:gap-6 items-center bg-brand-surface border border-brand-outline rounded p-4 no-underline hover:transform hover:translate-y-[-10px] transition-transform duration-300"
     >
         <img 
             :src="content.cover_image" 
