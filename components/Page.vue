@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 
-const props = defineProps<{
-  title?: string
-}>()
+const props = withDefaults(defineProps<{
+  title?: string,
+  showBreadcrumb?: boolean,
+  tableOfContents?: string,
+}>(), {
+  showBreadcrumb: true,
+})
 
 const formattedRouteName = computed<string>(() => {
   if (useRoute().name === 'index')
@@ -24,7 +28,10 @@ useHead({
 
 <template>
   <div>
-    <strong class="block mb-10 text-sm text-brand-primary capitalize">
+    <strong
+      v-if="showBreadcrumb" 
+      class="block mb-10 text-sm text-brand-primary capitalize"
+    >
       {{ formattedRouteName }}
     </strong>
     <slot />
@@ -32,6 +39,7 @@ useHead({
     <aside class="fixed top-[4.6rem] bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-6 px-8 overflow-y-auto hidden xl:flex flex-col gap-8 z-10">
       <slot name="sidebar">
         <ContactMe />
+        <TOC :table-of-contents="tableOfContents"/>
       </slot>
     </aside>
   </div>
