@@ -7,6 +7,26 @@ const config = useRuntimeConfig();
 const { data } = useFetch<Content>(`/contents/${route.params.slug}`, {
     baseURL: config.public.apiBaseUrl
 });
+
+useHead({
+  title: data.value?.data.title,
+  meta: [
+    { property: 'og:title', content: data.value?.data.title },
+    { property: 'og:description', content: data.value?.data.description },
+    { property: 'og:image', content: data.value?.data.cover_image },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:url', content: `https://yourwebsite.com/blog/${data.value?.data.slug}` },
+    { property: 'og:type', content: 'article' },
+
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: data.value?.data.title },
+    { name: 'twitter:description', content: data.value?.data.description },
+    { name: 'twitter:image', content: data.value?.data.cover_image },
+    { name: 'twitter:site', content: '@StankoBebek' },
+    { name: 'twitter:creator', content: '@StankoBebek' }
+  ]
+})
 </script>
 
 <template>
