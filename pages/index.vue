@@ -3,8 +3,9 @@ import { Color, HeadingElement } from '~/enums'
 
 const config = useRuntimeConfig()
 
-const { data } = await useFetch('/contents', {
+const { data } = useFetch('/contents', {
   baseURL: config.public.apiBaseUrl,
+  server: false,
 });
 </script>
 
