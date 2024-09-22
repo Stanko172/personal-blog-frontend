@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import { type Content } from '~/types'
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
     content: Content
-}>();
+    showTags: boolean
+}>(), {
+    showTags: false
+});
 </script>
 
 <template>
@@ -24,7 +27,7 @@ const props = defineProps<{
             </span>
             <strong class="block text-brand-text text-xl ">{{ content.title }}</strong>
             <p class="font-light text-sm ">{{ content.content }}</p> 
-            <ul class="flex flex-wrap items-baseline gap-2 list-none m-0 p-0 mt-2 mb-0"> 
+            <ul v-if="showTags" class="flex flex-wrap items-baseline gap-2 list-none m-0 p-0 mt-2 mb-0"> 
                 <li class="m-0 p-0 rounded text-xs text-brand-salmon border border-brand-outline bg-brand-surface">
                     <strong class="block px-2 py-1 font-medium text-brand-tertiary">{{ content.type }}</strong>
                 </li>

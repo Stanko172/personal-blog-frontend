@@ -41,6 +41,7 @@ const { data } = useFetch('/contents', {
       <ContentList 
         v-else
         :contents="data?.data"
+        show-tags
       />
     </div>
   </Page>
