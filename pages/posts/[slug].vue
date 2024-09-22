@@ -39,7 +39,7 @@ watchEffect(() => {
         :show-breadcrumb="false"
         :table-of-contents="data?.data.table_of_contents"
     >
-        <article class="max-w-none min-h-[calc(100vh-19rem)] prose dark:prose-invert">
+        <article class="max-w-none min-h-[calc(100vh-19rem)] prose prose-invert">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-between gap-2">
                 <time class="text-xs font-bold text-brand-primary">{{ data?.data.published_at }}</time>
             </div>
