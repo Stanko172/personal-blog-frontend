@@ -3,9 +3,8 @@ import { FontSize, HeadingElement } from '~/enums'
 
 const config = useRuntimeConfig()
 
-const { data } = useFetch('/contents?type=project', {
+const { data } = await useFetch('/contents?type=project', {
   baseURL: config.public.apiBaseUrl,
-  server: false
 });
 </script>
 

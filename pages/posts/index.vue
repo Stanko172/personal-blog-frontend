@@ -3,9 +3,8 @@ import { FontSize, HeadingElement } from '~/enums'
 
 const config = useRuntimeConfig()
 
-const { data } = useFetch('/contents?type=post', {
+const { data } = await useFetch('/contents?type=post', {
   baseURL: config.public.apiBaseUrl,
-  server: false
 });
 </script>
 
