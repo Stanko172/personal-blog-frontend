@@ -56,8 +56,9 @@ module.exports = {
             'h2, h3, h4, h5, h6': {
               color: theme('colors.brand-primary'),
             },
-            'strong': {
-              color: theme('colors.brand-tertiary'),
+            'mark': {
+              'background-color': 'inherit',
+              'color': theme('colors.brand-tertiary'),
             },
             'a': {
               color: theme('colors.brand-secondary'),
