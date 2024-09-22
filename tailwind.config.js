@@ -28,6 +28,9 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            'p': {
+              color: theme('colors.brand-text'),
+            },
             'pre': {
               'background-color': 'inherit',
               'padding': '0',
@@ -52,6 +55,9 @@ module.exports = {
               'box-shadow': 'none',
               'font-family': 'inherit',
               'color': 'inherit',
+            },
+            'h1': {
+              color: theme('colors.brand-primary'),
             },
             'h2, h3, h4, h5, h6': {
               color: theme('colors.brand-primary'),
