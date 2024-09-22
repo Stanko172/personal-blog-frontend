@@ -18,7 +18,7 @@ watchEffect(() => {
                 { property: 'og:image', content: data.value?.data.cover_image },
                 { property: 'og:image:width', content: '1200' },
                 { property: 'og:image:height', content: '630' },
-                { property: 'og:url', content: content.url },
+                { property: 'og:url', content: data.value?.data.content.url },
                 { property: 'og:type', content: 'article' },
 
                 { name: 'twitter:card', content: 'summary_large_image' },
