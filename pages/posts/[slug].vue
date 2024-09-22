@@ -4,7 +4,7 @@ import { type Content } from '~/types'
 const route = useRoute();
 const config = useRuntimeConfig();
 
-const { data } = useFetch<Content>(`/contents/${route.params.slug}`, {
+const { data } = await useFetch<Content>(`/contents/${route.params.slug}`, {
     baseURL: config.public.apiBaseUrl
 });
 
