@@ -5,6 +5,7 @@ const config = useRuntimeConfig()
 
 const { data } = await useFetch('/contents', {
   baseURL: config.public.apiBaseUrl,
+  server: false,
 });
 </script>
 
