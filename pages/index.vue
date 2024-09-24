@@ -9,6 +9,7 @@ const { data } = await useFetch('/contents', {
 </script>
 
 <template>
+  <Page title="Home">
     <div class="space-y-7">
       <div class="space-y-1.5">
         <Heading>
@@ -43,4 +44,5 @@ const { data } = await useFetch('/contents', {
         show-tags
       />
     </div>
+  </Page>
 </template>
