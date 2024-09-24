@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
+
   runtimeConfig: {
     public: {
       apiBaseUrl: process.env.API_BASE_URL,
     }
   },
+
   app: {
     head: {
       charset: 'utf-8',
@@ -39,23 +41,30 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   modules: ['nuxt-icon', '@pinia/nuxt', '@vueuse/nuxt'],
+
   nitro: {
     compressPublicAssets: true,
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
     },
   },
+
   pinia: {
     storesDirs: ['./stores/**'],
   },
+
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
   telemetry: false,
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  compatibilityDate: '2024-09-24',
 })

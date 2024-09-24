@@ -5,12 +5,10 @@ const config = useRuntimeConfig()
 
 const { data } = await useFetch('/contents', {
   baseURL: config.public.apiBaseUrl,
-  server: false,
 });
 </script>
 
 <template>
-  <Page title="Home">
     <div class="space-y-7">
       <div class="space-y-1.5">
         <Heading>
@@ -38,12 +36,12 @@ const { data } = await useFetch('/contents', {
           Discover the newest stories and ideas in my recent blog entries.
         </Paragraph>
       </div>
-      <EmptyCard v-if="data?.data.length === 0"/>
+      <pre>{{ data }}</pre>
+      <!-- <EmptyCard v-if="data?.data.length === 0"/>
       <ContentList 
         v-else
         :contents="data?.data"
         show-tags
-      />
+      /> -->
     </div>
-  </Page>
 </template>
