@@ -1,5 +1,5 @@
 import hljs from 'highlight.js';
-import 'assets/css/tokyo-night.css';
+import 'highlight.js/styles/tokyo-night-dark.css';
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive('highlightjs', {
