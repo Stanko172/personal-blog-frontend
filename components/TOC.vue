@@ -23,7 +23,7 @@ defineProps<{
 
 .toc a {
     font-size: 0.75rem;
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
     text-decoration: none;
     color: #a4a0fb;
 }
