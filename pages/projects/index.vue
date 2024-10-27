@@ -2,10 +2,20 @@
 import { FontSize, HeadingElement } from '~/enums'
 
 const config = useRuntimeConfig()
+const currentPage = ref<number>(1);
 
-const { data } = await useFetch('/contents?type=project', {
+const { data } = useFetch(() => '/contents', {
   baseURL: config.public.apiBaseUrl,
+  query: {
+    page: currentPage,
+    type: 'project',
+  },
+  watch: [currentPage],
 });
+
+function changePage(page: number) {
+  currentPage.value = page;
+}
 </script>
 
 <template>
@@ -24,6 +34,10 @@ const { data } = await useFetch('/contents?type=project', {
       <ContentList 
         v-else
         :contents="data?.data"
+        :currentPage="currentPage"
+        :prev-link="data?.links?.prev"
+        :next-link="data?.links?.next"
+        @change-page="changePage"
       />
     </Stack>
   </Page>

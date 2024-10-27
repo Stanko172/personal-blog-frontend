@@ -1,11 +1,18 @@
 <script lang="ts" setup>
 import { type Content } from '~/types'
+import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
+const router = useRouter();
 const config = useRuntimeConfig();
 
 const { data } = await useFetch<Content>(`/contents/${route.params.slug}`, {
-    baseURL: config.public.apiBaseUrl
+    baseURL: config.public.apiBaseUrl,
+    onResponseError: (error) => {
+        if (error.response?.status === 404) {
+            router.push('/404');
+        }
+    },
 });
 
 watchEffect(() => {
@@ -32,6 +39,7 @@ watchEffect(() => {
     }
 });
 </script>
+
 
 <template>
     <Page

@@ -4,10 +4,19 @@ import { type Content } from '~/types'
 
 const props = withDefaults(defineProps<{
     contents: Content[]
-    showTags: boolean
+    showTags?: boolean
+    currentPage: number
+    prevLink: string | null
+    nextLink: string | null
 }>(), {
     showTags: false
 });
+
+const emit = defineEmits(['changePage']);
+
+function changePage(page: number): void {
+    emit('changePage', page);
+}
 </script>
 
 <template>
@@ -17,5 +26,13 @@ const props = withDefaults(defineProps<{
             :content="content"
             :show-tags="showTags"
         />
+        <div class="">
+            <ContentPagination
+                :currentPage="currentPage"
+                :prev-link="prevLink"
+                :next-link="nextLink"
+                @change-page="changePage"
+            />
+        </div>
     </div>
 </template>

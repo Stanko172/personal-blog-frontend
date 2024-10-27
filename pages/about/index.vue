@@ -6,7 +6,7 @@ import { FontSize, HeadingElement, HyperlinkTarget } from '~/enums'
   <Page title="About">
     <Stack>
       <Heading :element="HeadingElement.H1" :font-size="FontSize.XLARGE">
-        More about me
+        About me
       </Heading>
       <Paragraph>
         Hello there! 👋

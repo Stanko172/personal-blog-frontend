@@ -1,11 +1,22 @@
 <script lang="ts" setup>
-import { Color, HeadingElement } from '~/enums'
+import { ref } from 'vue';
+import { useRuntimeConfig } from '#app';
+import { Color, HeadingElement } from '~/enums';
 
-const config = useRuntimeConfig()
+const config = useRuntimeConfig();
+const currentPage = ref<number>(1);
 
-const { data } = await useFetch('/contents', {
+const { data } = useFetch(() => '/contents', {
   baseURL: config.public.apiBaseUrl,
+  query: {
+    page: currentPage,
+  },
+  watch: [currentPage],
 });
+
+function changePage(page: number) {
+  currentPage.value = page;
+}
 </script>
 
 <template>
@@ -42,6 +53,10 @@ const { data } = await useFetch('/contents', {
         v-else
         :contents="data?.data"
         show-tags
+        :currentPage="currentPage"
+        :prev-link="data?.links?.prev"
+        :next-link="data?.links?.next"
+        @change-page="changePage"
       />
     </div>
   </Page>
